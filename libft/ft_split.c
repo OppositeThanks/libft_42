@@ -6,7 +6,7 @@
 /*   By: lperrin <lperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 16:54:20 by lperrin           #+#    #+#             */
-/*   Updated: 2022/04/26 16:40:16 by lperrin          ###   ########.fr       */
+/*   Updated: 2022/04/27 12:55:55 by lperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ static int	count_str(char const *s, char c)
 	flag = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] != c)
 			flag = 1;
-		if ((s[i] != c || s[i + 1] == '\0') && flag == 1)
+		if ((s[i] == c || s[i + 1] == '\0') && flag == 1)
 		{
 			flag = 0;
 			count++;
@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 				s++;
 		}
 	}
-	splitted[i] = NULL;
+	splitted[i] = 0;
 	return (splitted);
 }
 
