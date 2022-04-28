@@ -6,7 +6,7 @@
 /*   By: lperrin <lperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 15:50:25 by lperrin           #+#    #+#             */
-/*   Updated: 2022/04/21 18:33:55 by lperrin          ###   ########.fr       */
+/*   Updated: 2022/04/28 16:12:15 by lperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,22 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
-	char	*str;
+	size_t		i;
+	size_t		j;
+	char		*str;
 
-	i = 0;
-	j = 0;
-	str = malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char *));
-	if (!(str))
+	if (!s1 && !s2)
 		return (NULL);
+	str = malloc((sizeof(char) * (ft_strlen(s1) + ft_strlen(s2))) + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
 	while (s1[i] != '\0')
 	{
 		str[i] = s1[i];
 		i++;
 	}
+	j = 0;
 	while (s2[j] != '\0')
 	{
 		str[i] = s2[j];
@@ -38,11 +40,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-/* int main(void)
+/* int	main(void)
 {
-	char f[10] = "je suis 9";
-	char g[9] = "et moi 8";
-
+	char	f[10]="je suis 9";
+	char	g[3]=" 42";
+	
 	printf("%s\n", ft_strjoin(f, g));
 	return (0);
 }
