@@ -6,13 +6,12 @@
 /*   By: lperrin <lperrin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 09:46:32 by lperrin           #+#    #+#             */
-/*   Updated: 2022/04/28 11:08:05 by lperrin          ###   ########.fr       */
+/*   Updated: 2022/04/28 12:56:14 by lperrin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h> //adfgdfgdgsagrggsgsdgfdsgsdgergregggh
 # include <stdlib.h>
 # include <unistd.h>
 
